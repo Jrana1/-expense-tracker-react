@@ -8,6 +8,16 @@
 .container{
     width: 30%;
 }
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 768px) {
+.container{
+    width: 80%;
+}
+}
 .income-expences{
     display: flex;
     justify-content: space-around;
@@ -38,4 +48,26 @@ text-transform:uppercase;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-right: 5px solid #1eee74;
     border-radius: 5px;
+}
+ input{
+ width: 100%;
+ outline: none;
+padding: 5px 2px;
+border:0px;
+border-bottom: 2px solid rgb(201, 197, 197);
+}
+.icon-trash{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn{
+    width: 100%;
+    margin:10px 0px;
+    padding: 8px 0px;
+    border:0px;
+    background-color: #9c88ff;
+    color:white;
+    font-size: 18px;
+    border-radius: 4px;
 }

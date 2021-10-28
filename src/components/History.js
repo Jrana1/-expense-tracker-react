@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 
 const History = () => {
     return (
@@ -7,7 +10,11 @@ const History = () => {
             <hr />
             <div className="items">
                 <p>books</p>
-                <p>20</p>
+
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    <p style={{ marginRight: "15px" }}>20</p>
+                    <FontAwesomeIcon className="icon-trash" icon={faTrash} />
+                </div>
             </div>
         </div>
     );
