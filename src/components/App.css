@@ -70,4 +70,5 @@ border-bottom: 2px solid rgb(201, 197, 197);
     color:white;
     font-size: 18px;
     border-radius: 4px;
+    cursor: pointer;
 }
