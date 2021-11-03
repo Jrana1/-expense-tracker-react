@@ -10,18 +10,16 @@ function App() {
   const [amounts, setAmount] = useState(0);
   const [income, setIncome] = useState(0);
   const [expenses, setExpenses] = useState(0);
-  const [sign, setSign] = useState("");
-  const [text, setText] = useState("");
-  const [num, setNum] = useState("");
+  const [allInfo, setAllInfo] = useState([]);
   const handleAmount = (amount, text) => {
     //console.log(amount, text);
     // let sign = amount.slice(1);
     let newAmount = [...amount];
     newAmount.shift();
     let onlyNum = newAmount.join('');
-    setSign(amount[0]);
-    setText(text);
-    setNum(onlyNum);
+    setAllInfo([
+      ...allInfo, { text: text, sign: amount[0], num: onlyNum, id: Math.random() * 1000 }
+    ]);
     if (amount[0] === '+') {
       //console.log((onlyNum), amounts);
       setAmount(parseInt(onlyNum) + Math.abs(amounts));
@@ -39,7 +37,7 @@ function App() {
         <Header></Header>
         <Balance amount={amounts}></Balance>
         <Income income={[income, expenses]}></Income>
-        <History history={[sign, text, num]}></History>
+        <History history={allInfo} setAllInfo={setAllInfo}></History>
         <Amount func={handleAmount}></Amount>
       </div>
     </div>

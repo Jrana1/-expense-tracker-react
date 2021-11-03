@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Income = (props) => {
-    console.log(props);
+    //console.log(props);
     const [income, expenses] = props.income;
     //console.log(income, expenses);
     return (
